@@ -1,0 +1,40 @@
+import java.time.LocalDate;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // Creazione utenti
+        Utente Goku = new Utente(1, "Goku", "iheardyourereallystrong", "kakarot@gmail.com");
+        Utente Vegeta = new Utente(2, "Vegeta", "imnotabigfanofthegovernaument", "saiyansprince@gmail.com");
+
+        // Creazione bacheca
+        Bacheca tempoLibero = new Bacheca(1, "Tempo Libero", "Cose da fare nel tempo libero");
+        Goku.getBacheca().add(tempoLibero);
+
+        Bacheca Lavoro = new Bacheca (2, "Lavoro", "Cosa fare a lavoro");
+        Vegeta.getBacheca().add(Lavoro);
+
+        // Creazione ToDo
+        ToDo combattere = new ToDo(1, "Combattere");
+        combattere.setDescrizione("Combattere contro Vegeta/Goku");
+        combattere.setDataScadenza(LocalDate.of(2025, 10, 25));
+
+        ToDo pizzaiolo = new ToDo(2, "Pizza");
+        pizzaiolo.setDescrizione("Fare le pizze");
+        pizzaiolo.setDataScadenza(LocalDate.of(2025, 10, 25));
+
+        // Aggiunta ToDo alla bacheca
+        tempoLibero.aggiungiToDo(combattere);
+        Lavoro.aggiungiToDo(pizzaiolo);
+        // Condivisione ToDo
+        combattere.aggiungiCondivisione(Vegeta);
+
+        // Stampa risultati
+        System.out.println("Bacheca di " + Goku.getUsername() + ": " + tempoLibero.getTitolo());
+            System.out.println("Bacheca di " + Vegeta.getUsername() + ": " + Lavoro.getTitolo());
+            }
+
+
+        }
+
+
