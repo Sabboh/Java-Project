@@ -1,0 +1,61 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Bacheca {
+    private int id;
+    private String titolo;
+    private String Descrizione;
+    private List<ToDo> Todos;
+
+    public Bacheca(int idBacheca, String Titolo, String Descrizione) {
+        this.id = idBacheca;
+        this.Descrizione = Descrizione;
+        this.titolo = Titolo;
+        this.Todos = new ArrayList<>();
+    }
+    //Getter & Setter
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTitolo() {
+        return titolo;
+    }
+
+    public void setTitolo(String Titolo) {
+        this.titolo = Titolo;
+    }
+
+    public String getDescrizione() {
+        return Descrizione;
+    }
+
+    public void setDescrizione(String Descrizione) {
+        this.Descrizione = Descrizione;
+    }
+
+    public List<ToDo> getTodos() { return Todos; }
+
+    // Metodi
+    public void aggiungiToDo(ToDo t) {
+        // Da implementare
+    }
+
+    public void rimuoviToDo(ToDo t) {
+        // Da implementare
+    }
+
+    public void spostaToDo(ToDo t, Bacheca altraBacheca) {
+        // Da implementare
+    }
+
+    public void ordinaToDo() {
+        // Da implementare
+    }
+}
+
