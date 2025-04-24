@@ -1,0 +1,69 @@
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ToDo {
+    private int id;
+    private String titolo;
+    private String descrizione;
+    private LocalDate dataScadenza;
+    private String url;
+    private String immagine; // Semplificato come path stringa
+    private boolean completato;
+    private int ordine;
+    private List<Utente> condivisoCon;
+
+
+    public ToDo(int id, String titolo) {
+        this.id = id;
+        this.titolo = titolo;
+        this.completato = false;
+        this.condivisoCon = new ArrayList<>();
+
+    }
+
+    // Getter e Setter
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+
+    public String getTitolo() { return titolo; }
+    public void setTitolo(String titolo) { this.titolo = titolo; }
+
+    public String getDescrizione() { return descrizione; }
+    public void setDescrizione(String descrizione) { this.descrizione = descrizione; }
+
+    public LocalDate getDataScadenza() { return dataScadenza; }
+    public void setDataScadenza(LocalDate dataScadenza) { this.dataScadenza = dataScadenza; }
+
+    public String getUrl() { return url; }
+    public void setUrl(String url) { this.url = url; }
+
+    public String getImmagine() { return immagine; }
+    public void setImmagine(String immagine) { this.immagine = immagine; }
+
+    public boolean isCompletato() { return completato; }
+    public void setCompletato(boolean completato) { this.completato = completato; }
+
+    public int getOrdine() { return ordine; }
+    public void setOrdine(int ordine) { this.ordine = ordine; }
+
+    public List<Utente> getCondivisoCon() { return condivisoCon; }
+
+
+    // Metodi
+    public void completa() {
+        // Da implementare
+    }
+
+    public void modifica(String nuovoTitolo, String descrizione, LocalDate scadenza, String url, String immagine) {
+        // Da implementare
+    }
+
+    public void aggiungiCondivisione(Utente u) {
+        // Da implementare
+    }
+
+    public void rimuoviCondivisione(Utente u) {
+        // Da implementare
+    }
+}
